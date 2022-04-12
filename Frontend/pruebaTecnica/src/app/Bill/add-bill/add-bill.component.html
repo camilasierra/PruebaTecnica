@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="row">      	
+            <div class="col-md-12 mt-5">
+                <h1>Crear Factura </h1>
+    
+                <form >
+                    <div class="form-group">
+                        <label for="date_bill">Bill</label>
+                        <input type="date" class="form-control" id="date_bill" name="date_bill" [(ngModel)]="billNew.date_bill">
+                    </div>  
+
+                        <div class="form-group">
+                            <label for="id_client">Cliente</label>
+                            <select name="id_client" [(ngModel)]="billNew.id_client"class="form-control" >
+                                <option *ngFor="let item of list"  value="{{item.id_client}}">{{item.name}} </option>
+                            </select>
+                        </div> 
+                    
+
+                    <div class="form-group">
+                        <label for="id_product">Productos</label>
+                        <select  name ="id_product" [(ngModel)]="detailNew.id_product" class="form-control">
+                            <option *ngFor="let itempro of listpro"  value="{{itempro.id_product}}">{{itempro.name}} </option>
+                        </select>
+                    </div>
+
+                    
+
+                    <div class="form-group">
+                        <label for="amount">cantidad</label>
+                        <input type="number"   class="form-control" id="amount" name="amount" [(ngModel)]="detailNew.amount">
+                    </div> 
+                    <div class="form-group">
+                        <label for="price">price</label>
+                        <input type="text"   disabled class="form-control" id="price" name="price" [(ngModel)]="detailNew.price">
+                    </div>
+
+                    <div>
+                        <h1>
+                            
+                        </h1>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" (click)="addall()">Guardar</button> 
+                        <button class="btn btn-warning" [routerLink]="['/listat']">Volver</button>              
+                    </div>   
+
+                   
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

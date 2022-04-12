@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="starter-template">
+        <div class="row">      	
+            <div class="col-md-12 mt-5">
+                <h1>Crear Cliente </h1>
+    
+                <form >
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="clientNew.name">
+                    </div>  
+
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" [(ngModel)]="clientNew.last_name">
+                        </div> 
+                    
+
+                    <div class="form-group">
+                        <label for="direction">Direction</label>
+                        <input type="text" class="form-control" id="direction" name="direction" [(ngModel)]="clientNew.direction">
+
+                    </div>
+
+                    
+
+                    <div class="form-group">
+                        <label for="birthdate">Birth date</label>
+                        <input type="date"   class="form-control" id="birthdate" name="birthdate" [(ngModel)]="clientNew.birthdate">
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="phone">phone</label>
+                        <input type="number"  class="form-control" id="phone" name="phone" [(ngModel)]="clientNew.phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="text"  class="form-control" id="email" name="email" [(ngModel)]="clientNew.email">
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" (click)="addClient()">Guardar</button>               
+                        <button class="btn btn-warning" [routerLink]="['/listat']">Volver</button>      
+                    </div>   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
